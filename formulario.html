@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Gracias por inscribirte en nuestro portal</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portal de empleo Nazaret 2025">  
+    <meta name="keywords" content="empleo, trabajo, solicitud, portal, nazaret, 2025">
+    <meta name="author" content="Roberto Pérez Huguet 2025">
+    <link rel="stylesheet" href="css/styles.css">   
+   
+</head>
+<body>
+    <header>
+        <h1>Cumplimenta el siguiente formulario</h1>
+        <h2>No te olvides de rellenar todos los datos para aumentar tu empleabilidad</h2>
+    </header>
+    <div class="form-container">
+        <h1>Datos de la persona solicitante</h1>
+        <form id="formulario" action="#" method="post" onsubmit="validarFormulario(event)">
+            <!--Nombre-->
+            <label for="nombre">Nombre<span class="asterisco">*</span></label>
+            <input type="text" id="nombre" name="nombre" required>
+            <!--Apellidos-->
+            <label for="apellidos">Apellidos<span class="asterisco">*</span></label>
+            <input type="text" id="apellidos" name="apellidos" required>
+            <!--Correo electrónico-->         
+            <label for="email">Correo electrónico:<span class="asterisco">*</span></label>
+            <input type="email" id="email" name="email" required>
+            <!--Fecha de nacimiento-->
+            <label for="fecha_nacimiento">Fecha de Nacimiento:<span class="asterisco">*</span></label>
+            <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+            <!--Dirección-->
+            <label for="direccion">Dirección<span class="asterisco">*</span>:</label>
+            <input type="text" id="direccion" name="direccion" required placeholder="Ejemplo: Calle 123 # 45-67">
+            <!--Teléfono-->
+            <label for="telefono">Teléfono<span class="asterisco">*</span>:</label>
+            <input type="tel" id="telefono" name="telefono" required placeholder="Ejemplo: 1234567890">
+            <!-- Puesto al que opta-->
+            <label for="puesto">Puesto al que opta<span class="asterisco">*</span>:</label>
+            <select id="puesto" name="puesto" required>
+                <option value="">Seleccione un puesto</option>
+                <option value="ingeniero">Ingeniero</option>
+                <option value="medico">Médico</option>
+                <option value="abogado">Abogado</option>
+                <option value="arquitecto">Arquitecto</option>
+                <option value="psicologo">Psicólogo</option>
+            </select>
+            <!-- Fecha disponibilidad-->
+            <label for="fecha_disponibilidad">Fecha de disponibilidad<span class="asterisco">*</span>:</label>  
+            <input type="date" id="fecha_disponibilidad" name="fecha_disponibilidad" required>
+            <!-- Situación laboral actual  -->
+            <fieldset id="grupo-situacion">
+                <legend>Situación laboral actual</legend>
+                <input type="radio" id="estudiante" name="situacion" value="estudiante">
+                <label for="estudiante">Estudiante</label>
+                <input type="radio" id="desempleado" name="situacion" value="desempleado">
+                <label for="desempleado">Desempleado</label>
+                <input type="radio" id="empleado" name="situacion" value="empleado">
+                <label for="empleado">Empleado</label>
+                <input type="radio" id="otro" name="situacion" value="otro">
+                <label for="otro">Otro</label>            
+            </fieldset>
+            <!-- incorporar CV-->
+            <label for="cv">Incorpora tu CV en formato PDF<span class="asterisco">*</span></label>
+            <input type="file" id="cv" name="cv" accept=".pdf" required>
+            <!-- Observaciones-->
+            <label for="observaciones">Observaciones</label>
+            <textarea id="observaciones" name="observaciones" placeholder="Observaciones"></textarea>
+            <!--Aceptación de términos y condiciones-->
+            <label for="aceptar">Acepto los términos y condiciones<span class="asterisco">*</span></label>
+            <input type="checkbox" id="aceptar" name="aceptar" required>
+            <!--Botón de envío-->
+            <button type="button" onclick="location.href='index.html'">Ir al inicio</button>
+            <button type="reset">Borrar formulario</button>
+            <button type="submit">Enviar formulario</button>
+        </form>
+    </div>
+</body>
+</html>
